@@ -46,6 +46,7 @@
           .logo {
             grid-area: logo;
             padding-left: 10px;
+            text-align: left;
           }
 
           .menu {
@@ -53,7 +54,6 @@
           }
 
       .content {
-        /* border: solid 2px grey; */
         grid-area: content;
       }
 
@@ -140,6 +140,54 @@
               font-weight: bolder;
             }
 
+        .resume-container {
+          padding: 20px;
+          /* border: solid 2px white; */
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+          grid-template-rows: 1fr 3fr 1fr;
+          grid-template-areas:
+            "banner banner banner"
+            "education workExp additional"
+            "link link link";
+          grid-gap: 20px;
+        }
+
+            .resumeBanner {
+              /* border: solid 2px white; */
+              grid-area: banner;
+              padding: 0;
+              text-align: center;
+            }
+
+                #resumetxt {
+                  font-size: 50px;
+                  font-weight: bolder;
+                }
+
+            .education-container {
+              border: solid 2px white;
+              grid-area: education;
+            }
+
+            .workExp-container {
+              border: solid 2px white;
+              grid-area: workExp;
+            }
+
+            .additional-container {
+              border: solid 2px white;
+              grid-area: additional;
+            }
+
+            .link {
+              grid-area: link;
+            }
+
+                #resumeLink {
+                  text-align: center;
+                }
+
       .footer {
         /* border: solid 2px grey; */
         grid-area: footer;
@@ -149,6 +197,11 @@
 
 h2 {
   font-family: 'Montserrat', sans-serif;
+  text-align: center;
+}
+
+#jw {
+  text-align: left;
 }
 
 a, a:visited {
@@ -178,6 +231,17 @@ ul {
   padding: auto;
   word-spacing: none;
   /* border: solid 2px white; */
+}
+
+.resumeInfo {
+  float: left;
+}
+
+.resItem {
+  display: block;
+  list-style-type: square;
+  display:list-item;
+  list-style-position:outside;
 }
 
     li {
@@ -233,6 +297,19 @@ span {
 
 span:hover {
   letter-spacing: 10px;
+}
+
+.education-container, .workExp-container, .additional-container {
+  -webkit-transition: border-width 200ms ease;
+  -moz-transition: border-width 200ms ease;
+  -ms-transition: border-width 200ms ease;
+  -o-transition: border-width 200ms ease;
+  transition: border-width 200ms ease;
+  padding: 10px;
+}
+
+.education-container:hover, .workExp-container:hover, .additional-container:hover {
+  border-width: 5px;
 }
 
 #formBanner {
